@@ -69,10 +69,10 @@ class KnowledgeBaseService(object):
 		if check_md5(md5_hex):
 			return "[跳过]内容已经存在"
 			
-		if len(data) > config.max_split_char_number:
-			knowledge_chunk: list[str] = self.spliter.split_text(data)
-		else:
-			knowledge_chunk=[data]
+		# if len(data) > config.max_split_char_number:
+		knowledge_chunk: list[str] = self.spliter.split_text(data)
+		# else:
+		# 	knowledge_chunk=[data]
 
 		metadata = {
 			"source": filename,
