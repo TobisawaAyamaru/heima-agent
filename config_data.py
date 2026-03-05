@@ -1,25 +1,26 @@
-
 md5_path = "./md5.text"
 
 
-#Chroma
+# Chroma
 collection_name = "rag"
 persist_directory = "./chroma_db"
 
 
-
-#spliter
+# spliter
 chunk_size = 100
 chunk_overlap = 20
-separators = ["\n\n","\n",",","|","?",".","。","，","\r\n"]
+separators = ["\n\n", "\n", ",", "|", "?", ".", "。", "，", "\r\n"]
 
 
-max_split_char_number=1000
+max_split_char_number = 1000
 
 
 #
-similarity_threshold = 1  #返回检索的数量
+similarity_threshold = 1  # 返回检索的数量
 
 
-embedding_model_name="text-embedding-v4"
-chat_model_name="qwen3-max"
+embedding_model_name = "text-embedding-v4"
+chat_model_name = "qwen3-max"
+
+
+session_config = {"configurable": {"session_id": "user_001"}}
